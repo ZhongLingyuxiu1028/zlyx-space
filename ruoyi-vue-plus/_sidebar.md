@@ -4,9 +4,9 @@
   - [AOP日志实现](/ruoyi-vue-plus/aop/01_aop_log.md)
   - [自定义注解 @RepeatSubmit](/ruoyi-vue-plus/aop/02_@RepeatSubmit.md)
 - **数据权限**
-  - [数据权限]()
-  - [数据权限调用流程分析]()
-  - [关于权限架构的一些想法]()
+  - [数据权限](/ruoyi-vue-plus/data-permission/00_permission.md)
+  - [数据权限调用流程分析](/ruoyi-vue-plus/data-permission/01_invoke_anlysis.md)
+  - [关于权限架构的一些想法](/ruoyi-vue-plus/data-permission/02_thoughts.md)
 - **Easy Excel**
   - [Excel 2003（*.xls）导入流程分析]()
   - [Excel 2007（*.xlsx）导入流程分析]()

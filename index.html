@@ -6,22 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <link rel="stylesheet" href="./static/lib/vue.css">
+    <!-- 右侧目录 docsify-toc https://github.com/mrpotatoes/docsify-toc -->
+    <link rel="stylesheet" href="./static/lib/toc.css">
 </head>
 <body>
 <div id="app"></div>
 <script>
     window.$docsify = {
-        name: '',
-        repo: '',
+        name: 'zlyx-space',
+        repo: 'https://github.com/ZhongLingyuxiu1028/zlyx-space',
         // 侧边栏支持，默认加载的是项目根目录下的_sidebar.md文件
         loadSidebar: true,
         // 导航栏支持，默认加载的是项目根目录下的_navbar.md文件
         loadNavbar: true,
         // 封面支持，默认加载的是项目根目录下的_coverpage.md文件
         coverpage: true,
+        // 最大支持渲染的标题层级
+        maxLevel: 5,
+        // 自定义侧边栏后默认不会再生成目录，设置生成目录的最大层级（建议配置为2-4）
+        subMaxLevel: 1,
+        // 小屏设备下合并导航栏到侧边栏
+        mergeNavbar: true,
+        // 页脚支持，默认加载的是 _footer.md
+        loadFooter: true,
     }
 </script>
+
+<script>
+    // 搜索配置(url：https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search)
+    window.$docsify = {
+        search: {
+            maxAge: 86400000,// 过期时间，单位毫秒，默认一天
+            paths: auto,// 注意：仅适用于 paths: 'auto' 模式
+            placeholder: '搜索',
+            // 支持本地化
+            placeholder: {
+                '/zh-cn/': '搜索',
+                '/': 'Type to search'
+            },
+            noData: '找不到结果',
+            depth: 4,
+            hideOtherSidebarContent: false,
+            namespace: 'Docsify-Guide',
+        }
+    }
+</script>
+
 <!-- Docsify v4 -->
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 
@@ -38,6 +69,10 @@
 <script src="//unpkg.com/docsify-scroll-to-top/dist/docsify-scroll-to-top.min.js"></script>
 <!-- 分页导航 -->
 <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<!-- 右侧目录 docsify-toc https://github.com/mrpotatoes/docsify-toc -->
+<script src="static/lib/toc.js"></script>
+<!-- 页脚-->
+<script src="//cdn.jsdelivr.net/npm/@alertbox/docsify-footer/dist/docsify-footer.min.js"></script>
 
 </body>
 </html>
