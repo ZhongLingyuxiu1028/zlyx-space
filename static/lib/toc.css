@@ -81,7 +81,7 @@ aside.nav.nothing {
 @media screen and (max-width: 1300px) {
     .page_toc {
         /* 页面不够大的时候会到页面顶部 */
-        /*position: relative;*/
+        position: relative;
         left: 0;
         top: -20px;
         padding: 10px 0;
