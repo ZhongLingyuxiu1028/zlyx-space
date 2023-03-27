@@ -21,7 +21,7 @@
 ![在这里插入图片描述](img06/15c2062d108c49ddb0fd53910c316c78.png)<br>
 
 ## 功能调用流程分析
-很久之前有写过关于 [Sa-Token 注解校验用户权限的分析](02_annotation.md)，新的拦截器实际上是结合了原本的路由拦截器 `SaRouteInterceptor` 和注解拦截器 `SaAnnotationInterceptor` 进行了升级，所以本文也是对两个版本进行对比说明。
+很久之前有写过关于 [Sa-Token 注解校验用户权限的分析](/ruoyi-vue-plus/sa-token/02_annotation.md)，新的拦截器实际上是结合了原本的路由拦截器 `SaRouteInterceptor` 和注解拦截器 `SaAnnotationInterceptor` 进行了升级，所以本文也是对两个版本进行对比说明。
 
 ### 1、流程简图（重点）
 ![在这里插入图片描述](img06/1dc4d2b509964e3996758c7fc556ddd6.png)
@@ -67,16 +67,16 @@
 ### 3.2、注解校验 `SaStrategy#checkMethodAnnotation`
 ![在这里插入图片描述](img06/d40998bc5e1d4e3c9d42f2b21ed79213.png)<br>
 
-这一步的校验和以前是一样的，在这里就不再赘述了，可以回头看一下以前的分析：[传送门](02_annotation.md)。<br>
+这一步的校验和以前是一样的，在这里就不再赘述了，可以回头看一下以前的分析：[传送门](/ruoyi-vue-plus/sa-token/02_annotation.md)。<br>
 ### 3.3、自定义函数
 经过步骤 `3.1` 如果没有返回，并且步骤 `3.2` 校验通过后，就会进入自定义函数的校验，也就是 `SaTokenConfig` 中定义的部分。<br>
 
 ![在这里插入图片描述](img06/ffdeb4bc79a94b13b124ce391b579c19.png)
 
-关于 `ExcludeUrlProperties` 如果有兴趣了解的话可以看看之前的分析（[传送门](05_intercepter.md)）：<br>
+关于 `ExcludeUrlProperties` 如果有兴趣了解的话可以看看之前的分析（[传送门](/ruoyi-vue-plus/sa-token/05_intercepter.md)）：<br>
 ![在这里插入图片描述](img06/e316cb701b0d4545a2248b9c042214c3.png)<br>
 
-除了设置放行路径以外主要的逻辑就是检查登录 `StpUtil.checkLogin()`，这个方法也不用多说什么了，之前也有过很详细的分析（[传送门](04_V1.30.0_login.md)）。<br>
+除了设置放行路径以外主要的逻辑就是检查登录 `StpUtil.checkLogin()`，这个方法也不用多说什么了，之前也有过很详细的分析（[传送门](/ruoyi-vue-plus/sa-token/04_V1.30.0_login.md)）。<br>
 
 ## 扩展分析
 ### 扩展1、为什么建议 `@Anonymous` 注解换成 `@SaIgnore` ？

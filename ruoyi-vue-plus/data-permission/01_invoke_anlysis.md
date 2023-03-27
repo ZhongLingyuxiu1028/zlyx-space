@@ -1,7 +1,7 @@
 # 数据权限（一）数据权限调用流程分析（参照 Mybatis Plus 数据权限插件）
 - - -
 ## 前言
-之前写过一篇关于数据权限的文章【[【若依】开源框架学习笔记 06 - 数据权限](https://blog.csdn.net/Michelle_Zhong/article/details/117441601) 】，在原版若依和 3.4.0 及其以下版本的 RuoYi-Vue-Plus 中使用的都是基于切面方式实现的数据权限功能。
+之前写过一篇关于数据权限的文章【[【若依】开源框架学习笔记 06 - 数据权限](/ruoyi-vue-plus/data-permission/00_permission.md) 】，在原版若依和 3.4.0 及其以下版本的 RuoYi-Vue-Plus 中使用的都是基于切面方式实现的数据权限功能。
 
 在 RuoYi-Vue-Plus 3.5.0 中，[狮子大佬](https://blog.csdn.net/weixin_40461281) 重写了数据权限的实现。
 

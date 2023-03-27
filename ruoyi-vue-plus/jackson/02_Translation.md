@@ -11,7 +11,7 @@
 - [翻译功能](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD/%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD)
   
 主要是关于该功能的使用说明以及扩展说明。<br>
-- [【RuoYi-Vue-Plus】学习笔记 28 - 数据脱敏 Json 序列化工具 SensitiveJsonSerializer](01_SensitiveJsonSerializer.md)
+- [【RuoYi-Vue-Plus】学习笔记 28 - 数据脱敏 Json 序列化工具 SensitiveJsonSerializer](/ruoyi-vue-plus/jackson/01_SensitiveJsonSerializer.md)
   
 关于序列化过程的解析可以参考以前的这篇文章，本文不再重复这一部分，主要说明翻译功能的实现以及调用流程。
 

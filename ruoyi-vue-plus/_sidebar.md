@@ -56,7 +56,7 @@
 - **OSS**
   - [OSS加载流程](/ruoyi-vue-plus/oss/01_oss_init.md)
   - [文件上传（使用MinIO基于Win10环境）](/ruoyi-vue-plus/oss/02_file_upload.md)
-  - [CentOS8 部署 MinIO（使用 docker-compose 搭建）](/ruoyi-vue-plus/oss/03_MinIO_CentOS8_deploy%20.md)
+  - [CentOS8 部署 MinIO（使用 docker-compose 搭建）](/ruoyi-vue-plus/oss/03_MinIO_CentOS8_deploy.md)
   - [MinIO 桶策略](/ruoyi-vue-plus/oss/04_MinIO_bucket_policy.md)
   - [简单分析多文件/图片上传的实现](/ruoyi-vue-plus/oss/05_upload_multiple.md)
   - [V4.2.0+ 版本三种方式配置使用](/ruoyi-vue-plus/oss/06_V4.2.0+_config.md)

@@ -6,7 +6,7 @@
 - [docker-compose 搭建 minio 分布式对象存储 最新版(使用教程)](https://lionli.blog.csdn.net/article/details/118568289)
 
 ## 一、概述
-在上一篇文章 [文件上传（使用MinIO基于Win10环境）](02_file_upload.md)中有关于在本机安装使用MinIO的内容，但是一般来说应用场景都是服务器，因此本文主要说明的是在服务器中搭建MinIO的过程。
+在上一篇文章 [文件上传（使用MinIO基于Win10环境）](/ruoyi-vue-plus/oss/02_file_upload.md)中有关于在本机安装使用MinIO的内容，但是一般来说应用场景都是服务器，因此本文主要说明的是在服务器中搭建MinIO的过程。
 ## 二、安装步骤
 ### 1、安装 docker-compose 并授权
 ![在这里插入图片描述](img03/ed8e35de050a49df8e56599b00323f42.png)

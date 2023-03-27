@@ -3,7 +3,7 @@
 ## 前言
 最近和 [狮子大佬](https://blog.csdn.net/weixin_40461281?type=blog) 研究讨论了一下 Redisson 集成 Spring Cache 在底层实现的缓存相关操作。
 
-在 [上一篇笔记](07_Spring_Cache.md) 中，着重点在于前面自动装配流程，对于缓存的相关操作分析的内容比较少（源码分析部分第 4 点有提及），因此再在此基础上深入来分析一下缓存的 Lua 脚本执行流程。
+在 [上一篇笔记](/ruoyi-vue-plus/redisson/07_Spring_Cache.md) 中，着重点在于前面自动装配流程，对于缓存的相关操作分析的内容比较少（源码分析部分第 4 点有提及），因此再在此基础上深入来分析一下缓存的 Lua 脚本执行流程。
 ## 参考目录
 - [SpringBoot 改造 Spring-Cache 注解实现 支持注解指定扩展参数](https://mp.weixin.qq.com/s/b_ZKJhLPep8wgtAETCyxIA)
   狮子大佬写的关于框架优化 Spring Cache 的功能实现。
