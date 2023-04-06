@@ -4,7 +4,7 @@
 前段时间框架发布了新版本 3.5.0，其中有一项是重构了分页功能。虽然分页功能并不复杂，但是基本上任何项目都会涉及到分页，而且我比较喜欢框架中对于分页功能的实现的代码，对比自己以前的项目简洁许多，所以这次就单独拿来说一下。
 
 ## 参考目录
-- [框架 wiki - 分页功能](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD)
+- [框架 wiki - 分页功能](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E5%88%86%E9%A1%B5%E5%8A%9F%E8%83%BD)
 - [Mybatis Plus 文档 - 分页插件](https://baomidou.com/pages/97710a/)
 
 在框架 wiki 中也有分页功能的描述以及使用。

@@ -2,7 +2,7 @@
 - - -
 ## 前言
 朋友们新年好！之前的一段时间一直在看尚硅谷新的MySQL的视频（老师讲得真好，推荐大家去看看），今天终于看完了，受益匪浅。
-前几天【RuoYi-Vue-Plus】发布了4.0的 [公测版本](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/tree/4.X-beta1/)，大家有兴趣可以去码云上拉下来看看。今天在看框架目录的时候，看到了 `PlusWebInvokeTimeInterceptor` 这个类，虽然功能不算难，但是可以拿出来学习一下。
+前几天【RuoYi-Vue-Plus】发布了4.0的 [公测版本](https://gitee.com/dromara/RuoYi-Vue-Plus/tree/4.X-beta1/)，大家有兴趣可以去码云上拉下来看看。今天在看框架目录的时候，看到了 `PlusWebInvokeTimeInterceptor` 这个类，虽然功能不算难，但是可以拿出来学习一下。
 
 这个类主要解决的问题是接口调用时间的统计，以前的项目中一般使用的都是 `ThreadLocal`进行上下文参数传递，但是这里使用了一个全新的类（或者说是我以前没用过的类） `TransmittableThreadLocal`；统计时间使用的方式一般是接口调用前后获取系统当前时间 `System.currentTimeMillis()` 相减之差即为调用时间，这样的方式虽然可以达到目的，但是说实话代码看起来不太美观，框架中使用了一个专门用于时间统计的类 `StopWatch`，调用方式也很简单。
 

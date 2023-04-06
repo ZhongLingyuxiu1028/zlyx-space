@@ -20,8 +20,8 @@
 ## 三、项目部署
 ### 参考目录
 - [若依环境部署 - 前端部署](http://doc.ruoyi.vip/ruoyi-vue/document/hjbs.html#%E5%89%8D%E7%AB%AF%E9%83%A8%E7%BD%B2)
-- [搭建Admin监控](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/%E6%90%AD%E5%BB%BAAdmin%E7%9B%91%E6%8E%A7)
-- [搭建任务调度中心](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/%E6%90%AD%E5%BB%BA%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E4%B8%AD%E5%BF%83)
+- [搭建Admin监控](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/%E6%90%AD%E5%BB%BAAdmin%E7%9B%91%E6%8E%A7)
+- [搭建任务调度中心](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E5%BF%AB%E9%80%9F%E5%BC%80%E5%A7%8B/%E6%90%AD%E5%BB%BA%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E4%B8%AD%E5%BF%83)
 
 后端部署没什么好说的，配置好环境就可以了。主要是前端部署不大熟悉需要看下具体配置。<br>
 ![在这里插入图片描述](img01/a67009f8693644af9743448dd8605d0b.png)<br>

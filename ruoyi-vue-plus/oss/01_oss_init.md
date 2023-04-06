@@ -6,7 +6,7 @@
 在原若依框架基础之上升级而来，目前该框架已经脱离了原框架做了更多的优化升级。
 
 项目源码：<br>
-https://gitee.com/JavaLionLi/RuoYi-Vue-Plus
+https://gitee.com/dromara/RuoYi-Vue-Plus
 
 ## 一、概述
 本篇文章主要从代码角度分析OSS配置加载流程。

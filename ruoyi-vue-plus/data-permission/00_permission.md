@@ -33,7 +33,7 @@
 
 ## 三、逻辑实现过程
 - [若依官方文档关于数据权限的说明](https://doc.ruoyi.vip/ruoyi/document/htsc.html#%E6%95%B0%E6%8D%AE%E6%9D%83%E9%99%90)
-- 本文使用的若依技术框架是扩展版本 [RuoYi-Vue-Plus](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus) ，因为引入了Mybatis-plus， 对于模板生成也进行了修改，数据权限相关功能有所修改和扩展，下面的说明也主要是基于本框架进行说明。
+- 本文使用的若依技术框架是扩展版本 [RuoYi-Vue-Plus](https://gitee.com/dromara/RuoYi-Vue-Plus) ，因为引入了Mybatis-plus， 对于模板生成也进行了修改，数据权限相关功能有所修改和扩展，下面的说明也主要是基于本框架进行说明。
 
 #### 1、数据权限的使用
 数据权限可以针对单表以及多表关联等不同维度进行，所以先从简单的单表进行说明。

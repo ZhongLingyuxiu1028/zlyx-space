@@ -8,7 +8,7 @@
 对于新的数据权限的使用方法也在框架wiki中有说明，所以本文只是在此基础上做简单的分析，仅作为学习之用，如有错误也请大佬们指出。
 
 ## 参考目录
-- [框架 wiki - 数据权限](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%95%B0%E6%8D%AE%E6%9D%83%E9%99%90)
+- [框架 wiki - 数据权限](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%95%B0%E6%8D%AE%E6%9D%83%E9%99%90)
 - [Mybatis Plus 文档 - 数据权限](https://baomidou.com/pages/1864e1/#%E6%95%B0%E6%8D%AE%E8%8C%83%E5%9B%B4-%E6%95%B0%E6%8D%AE%E6%9D%83%E9%99%90)
 
 框架中没有直接使用 Mybatis Plus 原生的数据权限插件，但是从写法来看应该对此有所借鉴，所以也可以参考一下 Mybatis Plus 的数据权限插件源码实现自己的数据权限功能。

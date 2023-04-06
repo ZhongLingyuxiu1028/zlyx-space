@@ -6,7 +6,7 @@
 关于 Jenkins 的安装请按照上一篇文章进行操作，本文主要是在框架 wiki 文档的基础上进行一些补充。
 
 ## 参考目录
-- [框架Wiki - 应用部署](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/快速开始/应用部署)<br>
+- [框架Wiki - 应用部署](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/快速开始/应用部署)<br>
 根据 wiki 可以使用 idea 的 Docker 插件进行部署。在本文中，Jenkins 的主要作用是节省了本地打包传包的步骤，如果是使用 Docker 构建等步骤，其实也是很方便的。
 
 ## 操作步骤
@@ -20,7 +20,7 @@
 > ![在这里插入图片描述](img05/279eb812607747c4ae970bc9bc763a05.png)<br>
 **请根据文档中的安装配置步骤进行操作，下面把链接也一起放出来。**
 
-> **请优先阅读 [idea环境配置](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/pages?sort_id=5985043&doc_id=1469725)**
+> **请优先阅读 [idea环境配置](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/pages?sort_id=5985043&doc_id=1469725)**
 >
 > **重点: 一知半解的必看**
 >

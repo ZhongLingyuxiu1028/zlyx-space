@@ -1,12 +1,12 @@
 # 数据加密功能 Encrypt 源码分析
 - - -
 ## 前言
-前段时间，在群里大佬们讨论了关于数据存储加密的相关需求，后面就有了关于这个功能的 [PR](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/pulls/274)，在 [框架 5.X 版本](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/tree/5.X/) 中，这个功能被抽取成了独立的组件，所以本文来分析一下这个功能的实现。
+前段时间，在群里大佬们讨论了关于数据存储加密的相关需求，后面就有了关于这个功能的 [PR](https://gitee.com/dromara/RuoYi-Vue-Plus/pulls/274)，在 [框架 5.X 版本](https://gitee.com/dromara/RuoYi-Vue-Plus/tree/5.X/) 中，这个功能被抽取成了独立的组件，所以本文来分析一下这个功能的实现。
 
 值得一提的是，基于这个功能，并且借助最近大火的 `ChatGPT`，对于 Mybatis 的自定义插件的实现过程，我有了更进一步的了解，并且最近也在结合书籍进行 Mybatis 源码的阅读，受益匪浅，有空的话会单独再对书中的笔记进行整理分享。
 
 ## 参考目录
-- [数据加密](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86)
+- [数据加密](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD/%E6%95%B0%E6%8D%AE%E5%8A%A0%E5%AF%86)
   主要是关于该功能的使用说明。
 - [通用源码阅读指导书：MyBatis源码详解](https://weread.qq.com/web/bookDetail/de732ba071f94a8ede7dc94)
   对于 Mybatis 源码（基于 `V3.5.2` 版本，目前框架版本为 `V3.5.11`）学习的资料，写得很详细并且易于上手。

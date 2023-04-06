@@ -1,7 +1,7 @@
 # 扩展笔记 07 - CentOS 7 集成 Prometheus + Grafana 监控初体验
 - - -
 ## 前言
-在微服务框架【RuoYi-Cloud-Plus】上，[狮子大佬](https://blog.csdn.net/weixin_40461281) 新集成了 Prometheus（普罗米修斯）和 Grafana 监控模块（目前在 [dev 分支]((https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus/tree/dev/)) 上可以尝鲜），因为一般情况下很少接触这一类的功能，出于学习的目的就尝试着自己在 Vue 框架上集成了一下，本文只是记录一下集成的过程。
+在微服务框架【RuoYi-Cloud-Plus】上，[狮子大佬](https://blog.csdn.net/weixin_40461281) 新集成了 Prometheus（普罗米修斯）和 Grafana 监控模块（目前在 [dev 分支]((https://gitee.com/dromara/RuoYi-Cloud-Plus/tree/dev/)) 上可以尝鲜），因为一般情况下很少接触这一类的功能，出于学习的目的就尝试着自己在 Vue 框架上集成了一下，本文只是记录一下集成的过程。
 
 同类型的教程非常多，本文只是在此基础上结合了一下【RuoYi-Vue-Plus】框架进行集成，其他框架可以自行尝试。
 

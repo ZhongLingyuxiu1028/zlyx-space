@@ -12,7 +12,7 @@
 ## 工具链接
 - [ApiFox](https://www.apifox.cn/)
   接口文档工具。
-  （使用此工具原因是框架新版 V4.3.0 不再使用 swagger-ui，因此将接口文档导入到 ApiFox 使用，具体导入方法请参考 ApiFox 官方文档以及 [框架 wiki](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3)）
+  （使用此工具原因是框架新版 V4.3.0 不再使用 swagger-ui，因此将接口文档导入到 ApiFox 使用，具体导入方法请参考 ApiFox 官方文档以及 [框架 wiki](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3)）
 - [Lua 在线工具](https://c.runoob.com/compile/66/)
   用于测试 Lua 脚本运行。
 - [Apache HTTP Server](https://httpd.apache.org/download.cgi)

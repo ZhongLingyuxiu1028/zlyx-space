@@ -122,7 +122,7 @@ Sa-Token 上下文处理器 `SaTokenContext`<br>
 
 ![在这里插入图片描述](img05/008e38b2753d4fcfb5d3bd3642b6954f.png)
 
-参考 [框架wiki](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%8E%A5%E5%8F%A3%E6%94%BE%E8%A1%8C) ，主要有两个途径：
+参考 [框架wiki](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%8E%A5%E5%8F%A3%E6%94%BE%E8%A1%8C) ，主要有两个途径：
 
 1. yaml 配置文件
    ![在这里插入图片描述](img05/5b3cce995b794ae6801b09e23af08001.png)

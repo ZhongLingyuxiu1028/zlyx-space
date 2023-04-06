@@ -3,7 +3,7 @@
 ## 前言
 关于 AOP 的使用很常见，最开始接触若依框架的时候就已经写过一篇关于日志AOP 的文章，前段时间好像刚好有关于 `@RepeatSubmit` 的一些讨论，所以就决定写篇博客，内容虽然不算难，但是也是作为【RuoYi-Vue-Plus】框架学习的一部分。
 ## 参考目录
-- [框架wiki文档 - 防重幂等](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E9%98%B2%E9%87%8D%E5%B9%82%E7%AD%89)
+- [框架wiki文档 - 防重幂等](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E9%98%B2%E9%87%8D%E5%B9%82%E7%AD%89)
 
 ## 代码实现
 ### 1、Maven 引入

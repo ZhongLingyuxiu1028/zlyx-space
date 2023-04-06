@@ -4,7 +4,7 @@
 本篇文章主要内容是 `RuoYi-Vue-Plus` 框架中的OSS模块的文件上传内容。
 ## 二、功能
 ### 0、前提
-关于OSS模块使用：[文档说明地址](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/OSS%E5%8A%9F%E8%83%BD)
+关于OSS模块使用：[文档说明地址](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/OSS%E5%8A%9F%E8%83%BD)
 ### 1、Web端页面
 ![在这里插入图片描述](img02/61249998802c42c09212a72c4576651a.png)
 

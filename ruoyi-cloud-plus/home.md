@@ -10,11 +10,10 @@ CSDN：[MichelleChung](https://blog.csdn.net/Michelle_Zhong?type=blog)<br>
 
 ## 代码地址
 
-| 介绍            | 项目名                  | 项目地址                                                                                                                   | 注意事项                            |
-|---------------|:---------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------|
-| 🔥 分布式集群      | RuoYi-Vue-Plus       | - [Gitee](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus)<br> - [GitHub](https://github.com/JavaLionLi/RuoYi-Vue-Plus)    | 重写RuoYi-Vue全方位升级(不兼容原框架)        |
-| 🔥 微服务分支      | RuoYi-Cloud-Plus     | - [Gitee](https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus)<br>- [GitHub](https://github.com/JavaLionLi/RuoYi-Cloud-Plus) | 重写RuoYi-Cloud全方位升级(不兼容原框架)      |
-| 💻 Vue 版本学习笔记 | RuoYi-Vue-Plus-Notes | - [Gitee](https://gitee.com/michelle1028/ruoyi-vue-plus-notes)                                                         | RuoYi-Vue-Plus 学习笔记（持续施工ing...） |
+| 介绍            | 项目名                  | 项目地址                                                                                                             | 注意事项                            |
+|---------------|:---------------------|------------------------------------------------------------------------------------------------------------------|---------------------------------|
+| 🔥 分布式集群      | RuoYi-Vue-Plus       | - [Gitee](https://gitee.com/dromara/RuoYi-Vue-Plus)<br> - [GitHub](https://github.com/dromara/RuoYi-Vue-Plus)    | 重写RuoYi-Vue全方位升级(不兼容原框架)        |
+| 🔥 微服务分支      | RuoYi-Cloud-Plus     | - [Gitee](https://gitee.com/dromara/RuoYi-Cloud-Plus)<br>- [GitHub](https://github.com/dromara/RuoYi-Cloud-Plus) | 重写RuoYi-Cloud全方位升级(不兼容原框架)      |
 
 ## 模块说明
 

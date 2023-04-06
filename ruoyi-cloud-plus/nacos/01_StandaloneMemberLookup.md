@@ -6,7 +6,7 @@
 之前 [狮子大佬](https://blog.csdn.net/weixin_40461281?type=blog) 有提议要不要研究一下【RuoYi-Cloud-Plus】，因为之前没有用过 Cloud 框架，对于相关的一些知识只是看过一些视频浅浅了解过，所以决定还是要从简单的开始入手学习一下这个框架，当然【RuoYi-Vue-Plus】也会继续更新下去。
 
 ## 参考文档
-- [框架 wiki](https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
+- [框架 wiki](https://gitee.com/dromara/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
 - [Nacos 官方文档](https://nacos.io/zh-cn/docs/what-is-nacos.html)
 - [Nacos架构&原理](https://developer.aliyun.com/ebook/36?spm=a2c6h.20345107.ebook-index.18.152c2984fsi5ST)<br>
 强烈推荐阅读一下这本官方教程。

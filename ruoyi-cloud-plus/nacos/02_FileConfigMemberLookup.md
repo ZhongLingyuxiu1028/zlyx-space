@@ -6,7 +6,7 @@
 同样地，本文还是在[《Nacos架构&原理》]((https://developer.aliyun.com/ebook/36?spm=a2c6h.20345107.ebook-index.18.152c2984fsi5ST))章节 `Nacos 寻址机制` 的基础上对源码进行分析和学习。
 
 ## 参考文档
-- [框架 wiki](https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
+- [框架 wiki](https://gitee.com/dromara/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
 - [Nacos 官方文档](https://nacos.io/zh-cn/docs/what-is-nacos.html)
 - [Nacos架构&原理](https://developer.aliyun.com/ebook/36?spm=a2c6h.20345107.ebook-index.18.152c2984fsi5ST)
 

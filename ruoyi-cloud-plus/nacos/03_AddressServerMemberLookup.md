@@ -4,7 +4,7 @@
 Nacos 的寻址机制一共有三种，前两篇分别介绍了 [单机寻址](/ruoyi-cloud-plus/nacos/01_StandaloneMemberLookup.md) 和 [文件寻址](/ruoyi-cloud-plus/nacos/02_FileConfigMemberLookup.md)，本篇来介绍最后一种地址服务器寻址。
 
 ## 参考文档
-- [框架 wiki](https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
+- [框架 wiki](https://gitee.com/dromara/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
 - [Nacos 官方文档](https://nacos.io/zh-cn/docs/what-is-nacos.html)
 - [Nacos架构&原理](https://developer.aliyun.com/ebook/36?spm=a2c6h.20345107.ebook-index.18.152c2984fsi5ST)
 

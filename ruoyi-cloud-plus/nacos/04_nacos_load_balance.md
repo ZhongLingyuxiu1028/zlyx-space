@@ -4,7 +4,7 @@
 上篇使用地址服务器寻址方式搭建完成 Nacos 集群后，本篇将使用 Nginx 实现简单的集群负载均衡（理论较少，属于应用篇）。
 
 ## 参考文档
-- [框架 wiki](https://gitee.com/JavaLionLi/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
+- [框架 wiki](https://gitee.com/dromara/RuoYi-Cloud-Plus/wikis/%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B)
 - [Nacos 官方文档](https://nacos.io/zh-cn/docs/what-is-nacos.html)
 - [Nacos架构&原理](https://developer.aliyun.com/ebook/36?spm=a2c6h.20345107.ebook-index.18.152c2984fsi5ST)
 - [Nginx - ngx_http_upstream_module](http://nginx.org/en/docs/http/ngx_http_upstream_module.html#upstream)

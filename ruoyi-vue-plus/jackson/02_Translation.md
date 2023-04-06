@@ -1,14 +1,14 @@
 # 翻译功能 Translation 源码分析
 - - -
 ## 前言
-朋友们新年好呀，好久没有更新专栏了，有一部分原因是前段时间比较懒（诶不是，是工作比较忙），还有一部分原因是最近投入到了 [框架 5.X 版本](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/tree/5.X/) 的开发当中，目前在开发多租户相关的功能。多说两句，5.X 是基于 `Spring Boot 3.X` 和 `JDK 17`，因此不再向下兼容了，是一次大升级，不过功能还不完善，所以目前只能学习使用，投入生产还需要一段时间。
+朋友们新年好呀，好久没有更新专栏了，有一部分原因是前段时间比较懒（诶不是，是工作比较忙），还有一部分原因是最近投入到了 [框架 5.X 版本](https://gitee.com/dromara/RuoYi-Vue-Plus/tree/5.X/) 的开发当中，目前在开发多租户相关的功能。多说两句，5.X 是基于 `Spring Boot 3.X` 和 `JDK 17`，因此不再向下兼容了，是一次大升级，不过功能还不完善，所以目前只能学习使用，投入生产还需要一段时间。
 
 回到这篇文章，想说说 [狮子大佬](https://blog.csdn.net/weixin_40461281?type=blog) 开发的一个新的功能：翻译功能。
 
 之所以会有这个功能，起因是 5.X 改变了字段存储的类型：`表结构创建人和修改人字段使用ID存储`，但是前端展示还是维持原本的样子，因此需要把 id 转换成原本的内容再返回。**框架采用的是和脱敏功能类似的方式，通过自定义注解 + 自定义序列化器来实现**，具体的过程下面细说。
 
 ## 参考目录
-- [翻译功能](https://gitee.com/JavaLionLi/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD/%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD)
+- [翻译功能](https://gitee.com/dromara/RuoYi-Vue-Plus/wikis/%E6%A1%86%E6%9E%B6%E5%8A%9F%E8%83%BD/%E6%89%A9%E5%B1%95%E5%8A%9F%E8%83%BD/%E7%BF%BB%E8%AF%91%E5%8A%9F%E8%83%BD)
   
 主要是关于该功能的使用说明以及扩展说明。<br>
 - [【RuoYi-Vue-Plus】学习笔记 28 - 数据脱敏 Json 序列化工具 SensitiveJsonSerializer](/ruoyi-vue-plus/jackson/01_SensitiveJsonSerializer.md)
