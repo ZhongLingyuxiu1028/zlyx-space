@@ -4,4 +4,4 @@
 
 ### [RuoYi-Cloud-Plus 学习笔记](ruoyi-cloud-plus/home.md)
 
-### [Mybatis 学习笔记](mybatis/home.md)
+### [MyBatis 学习笔记](mybatis/home.md)

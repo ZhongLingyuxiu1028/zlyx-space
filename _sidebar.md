@@ -1,4 +1,4 @@
 <!-- _sidebar.md -->
 
 - **开始**
-  - [文档介绍](/README.md)
+  - [文档整理](/README.md)
