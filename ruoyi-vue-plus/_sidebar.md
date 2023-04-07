@@ -4,6 +4,8 @@
 <div style="text-align: center; font-weight: bold; font-size: large">RuoYi-Vue-Plus-Notes</div>
 </html>
 
+- **首页**
+  - [简介](/ruoyi-vue-plus/home.md)
 - **AOP**
   - [AOP日志实现](/ruoyi-vue-plus/aop/01_aop_log.md)
   - [自定义注解 @RepeatSubmit](/ruoyi-vue-plus/aop/02_@RepeatSubmit.md)

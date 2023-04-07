@@ -1,5 +1,12 @@
 # MyBatis 学习笔记（持续施工ing...）
+- - -
 
+## 源码学习
+### 参考目录
+- 书籍：[《通用源码阅读指导书：MyBatis源码详解》](https://weread.qq.com/web/bookDetail/de732ba071f94a8ede7dc94)<br>
+- Demo：[《通用源码阅读指导书——MyBatis源码详解》配套示例](https://github.com/yeecode/MyBatisDemo)<br>
+
+### 学习笔记
 - [泛型解析器TypeParameterResolver](/mybatis/230216_TypeParameterResolver.md)
 - [Java元注解以及@Param注解分析](/mybatis/230216_annotations.md)
 - [类型处理器TypeHandler](/mybatis/230218_TypeHandler.md)

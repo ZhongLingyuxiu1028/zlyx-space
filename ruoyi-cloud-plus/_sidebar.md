@@ -4,6 +4,8 @@
 <div style="text-align: center; font-weight: bold; font-size: large">RuoYi-Cloud-Plus-Notes</div>
 </html>
 
+- **首页**
+  - [简介](/ruoyi-cloud-plus/home.md)
 - **Nacos**
   - [寻址机制之单机寻址分析](/ruoyi-cloud-plus/nacos/01_StandaloneMemberLookup.md)
   - [寻址机制之文件寻址分析](/ruoyi-cloud-plus/nacos/02_FileConfigMemberLookup.md)
