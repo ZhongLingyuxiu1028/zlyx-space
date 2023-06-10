@@ -13,3 +13,5 @@
   - [使用Nginx简单实现Nacos集群负载均衡](/ruoyi-cloud-plus/nacos/04_nacos_load_balance.md)
 - **Spring Cloud Gateway**
   - [关于配置文件参数](/ruoyi-cloud-plus/spring-cloud-gateway/01_properties.md)
+- **Sentinel**
+  - [关于 StatisticSlot 以及 LeapArray](/ruoyi-cloud-plus/sentinel/01_StatisticSlot&LeapArray.md)
