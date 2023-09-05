@@ -16,11 +16,13 @@
 
 ### 2、Sentinel 架构图
 总体架构图（搬运自官方文档）：
+
 ![在这里插入图片描述](images/01_StatisticSlot&LeapArray/7b54e310ee8e445d81e5be28337343eb.png)
 
 > Sentinel 的核心骨架，将不同的 Slot 按照顺序串在一起（责任链模式），从而将不同的功能（限流、降级、系统保护）组合在一起。slot chain 其实可以分为两部分：统计数据构建部分（statistic）和判断部分（rule checking）。
 
 在整理消化这个架构图时，看到了关于监控统计的介绍：
+
 ![在这里插入图片描述](images/01_StatisticSlot&LeapArray/7b33f945489b46ad85b1d91fde79bd35.png)
 
 > Sentinel 底层采用高性能的滑动窗口数据结构 LeapArray 来统计实时的秒级指标数据，可以很好地支撑写多于读的高并发场景。
@@ -133,9 +135,11 @@ CAS操作：<br>
 当 Sentinel 监控系统对某个资源进行监控时，会创建一个对应的 `StatisticNode` 节点，该节点通过 `StatisticSlot` 统计槽收集和处理数据，并通过 `ArrayMetric` 数组度量器来维护收集的数据。`LeapArray` 则相当于一个滑动时间窗口，用于按照时间周期将各个 `ArrayMetric` 链接起来，以形成一个时间线的统计图。
 
 `ArrayMetric`
+
 ![在这里插入图片描述](images/01_StatisticSlot&LeapArray/ed25bdfb75d946b8a784553f7b0355b0.png)
 
 `StatisticNode`
+
 ![在这里插入图片描述](images/01_StatisticSlot&LeapArray/532808913bea4f75b9ba2c663ca7ec30.png)
 
 （完）
