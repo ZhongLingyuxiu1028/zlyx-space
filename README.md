@@ -9,6 +9,15 @@
 - [RuoYi-Cloud-Plus 学习笔记](ruoyi-cloud-plus/home.md)
 - [MyBatis 学习笔记](mybatis/home.md)
 
+### 本地预览
+
+Docsify 启动命令（需要独立安装）：
+```shell
+docsify serve ./
+```
+
+本地路径：`http://localhost:3000`
+
 ### 说明
 - 建站原意是作为 CSDN 的备份，也方便查看。（万一哪天 CSDN 不更新了，这里还是会继续更新的）
 - CSDN 图片弄了防盗链，整理之前的图片属实头皮发麻。
