@@ -17,3 +17,4 @@
   - [关于 StatisticSlot 以及 LeapArray](/ruoyi-cloud-plus/sentinel/01_StatisticSlot&LeapArray.md)
   - [Node & ProcessorSlotChain 总览与知识整理](/ruoyi-cloud-plus/sentinel/02_Node&ProcessorSlotChain.md)
   - [流量控制知识整理](/ruoyi-cloud-plus/sentinel/03_FlowControl.md)
+  - [熔断降级知识整理](/ruoyi-cloud-plus/sentinel/04_Degrade&CircuitBreaker.md)
