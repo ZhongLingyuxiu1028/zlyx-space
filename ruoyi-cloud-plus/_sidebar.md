@@ -18,3 +18,5 @@
   - [Node & ProcessorSlotChain 总览与知识整理](/ruoyi-cloud-plus/sentinel/02_Node&ProcessorSlotChain.md)
   - [流量控制知识整理](/ruoyi-cloud-plus/sentinel/03_FlowControl.md)
   - [熔断降级知识整理](/ruoyi-cloud-plus/sentinel/04_Degrade&CircuitBreaker.md)
+- **Seata**
+  - [Seata Server 部署（Windows、Docker 基于 Jpom）](/ruoyi-cloud-plus/seata/00_SeataServerDeploy.md)
