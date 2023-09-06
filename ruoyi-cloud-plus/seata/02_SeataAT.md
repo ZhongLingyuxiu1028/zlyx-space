@@ -7,7 +7,7 @@
 之前的文章介绍了 XA 模式的调用流程。但是 XA 模式也存在着一些问题：
 
 > （截图自微信读书《阿里云云原生架构实践》）<br>
-> ![这里是引用](https://img-blog.csdnimg.cn/82610ac287f74b65a600564b386479d0.png)
+> ![这里是引用](images/02_SeataAT/82610ac287f74b65a600564b386479d0.png)
 
 而为了能够解决 XA 模式存在的问题， Seata 演化出了 AT 模式，本文来介绍一下 AT 模式的底层调用流程。
 
@@ -30,7 +30,7 @@
 ### 0、Demo XA / AT 模式切换
 两种模式业务代码相同，只是修改数据源配置即可进行模式切换。
 > （截图自 GitHub README.md）<br>
-> ![在这里插入图片描述](https://img-blog.csdnimg.cn/b7a67d4d80ec42cfa8acf4a77d2de81b.png)
+> ![在这里插入图片描述](images/02_SeataAT/b7a67d4d80ec42cfa8acf4a77d2de81b.png)
 
 建表 undo_log：
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS undo_log
 ```
 
 ### 1、模块说明
-![在这里插入图片描述](https://img-blog.csdnimg.cn/4bac125836d348f59d75f499e0adefe3.png)
+![在这里插入图片描述](images/02_SeataAT/4bac125836d348f59d75f499e0adefe3.png)
 
 Demo 一共四个模块，是经典的下单流程。**按照如下顺序启动**：
 - 账户模块（Port：8083） 
@@ -72,7 +72,7 @@ http://127.0.0.1:8084/purchase
 
 
 > （截图自 GitHub README.md）<br>
-> ![在这里插入图片描述](https://img-blog.csdnimg.cn/1f9b3f57014044aa9669d232b94af4be.png)
+> ![在这里插入图片描述](images/02_SeataAT/1f9b3f57014044aa9669d232b94af4be.png)
 ### 3、分析流程说明
 整个下单操作是一个全局事务，各个模块分属于各个分支事务。下面对源码进行分析时只对其中一个分支操作进行说明，其余分支操作都是相同的，就不再展开说明。
 
@@ -86,24 +86,24 @@ http://127.0.0.1:8084/purchase
 为了完整体现整个全局事务流程，也在不断点的情况下对流程进行了截取分析并制作了流程图，详细的见下文。
 ## Seata AT 模式 Commit 调用流程分析
 ### 1、调用流程图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/787664ae618f412f9e2dba473962e7f2.png)
+![在这里插入图片描述](images/02_SeataAT/787664ae618f412f9e2dba473962e7f2.png)
 
 步骤前面由数字标识，根据各模块控制台输出整理，详细见附录。
 
 ### 2、全局事务开启 Global Begin
 `io.seata.tm.api.DefaultGlobalTransaction#begin`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e310b05c320d490e95adbbb120492984.png)
+![在这里插入图片描述](images/02_SeataAT/e310b05c320d490e95adbbb120492984.png)
 
 `io.seata.tm.DefaultTransactionManager#begin`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/840ed8e6c00f4977822d86438f32144f.png)
+![在这里插入图片描述](images/02_SeataAT/840ed8e6c00f4977822d86438f32144f.png)
 
 这一步骤向 Server 端（TC）发送了全局事务开启请求。下面来看下 Server 端处理逻辑：
 
 `io.seata.core.rpc.processor.server.ServerOnRequestProcessor#onRequestMessage`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3ad65d5ac60d447d9096133c1c4b7e85.png)
+![在这里插入图片描述](images/02_SeataAT/3ad65d5ac60d447d9096133c1c4b7e85.png)
 
 控制台打印：
 
@@ -113,7 +113,7 @@ http://127.0.0.1:8084/purchase
 
 `io.seata.server.coordinator.DefaultCoordinator#doGlobalBegin`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b25951ddae054a1cb2580780cbfcee58.png)
+![在这里插入图片描述](images/02_SeataAT/b25951ddae054a1cb2580780cbfcee58.png)
 
 控制台打印：
 
@@ -123,15 +123,15 @@ http://127.0.0.1:8084/purchase
 
 `io.seata.server.coordinator.DefaultCore#begin`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9a4e90eba1634b29b9050c9bbd27e3f3.png)
+![在这里插入图片描述](images/02_SeataAT/9a4e90eba1634b29b9050c9bbd27e3f3.png)
 
 `io.seata.server.session.GlobalSession#GlobalSession`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/d01f25a6290f48c3880e85e8f8d6d729.png)
+![在这里插入图片描述](images/02_SeataAT/d01f25a6290f48c3880e85e8f8d6d729.png)
 
 `io.seata.core.rpc.processor.server.ServerOnResponseProcessor#process`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/55a799b4d0f740c4bc4b7ad1bfbf8093.png)
+![在这里插入图片描述](images/02_SeataAT/55a799b4d0f740c4bc4b7ad1bfbf8093.png)
 
 控制台打印：
 
@@ -150,47 +150,47 @@ Server 端处理完毕后，回到 Client 端主方法，事务开启。
 
 因为调用的方法很多，所以截了一张 Debug 堆栈信息图方便比对。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/3032359e4dee4456b54b86a93c91b12e.png)
+![在这里插入图片描述](images/02_SeataAT/3032359e4dee4456b54b86a93c91b12e.png)
 
 从上图可以看出，先执行了 SQL 相关的一些操作，然后进行 Commit 操作，在提交之前进行分支注册操作。来看下一些关键的方法：
 
 `io.seata.rm.datasource.PreparedStatementProxy#executeUpdate`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5b167942925243399c76d90d74218d54.png)
+![在这里插入图片描述](images/02_SeataAT/5b167942925243399c76d90d74218d54.png)
 
 `io.seata.rm.datasource.exec.ExecuteTemplate#execute`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f2c21ee5f2674d76a60c7ada82042b4a.png)
+![在这里插入图片描述](images/02_SeataAT/f2c21ee5f2674d76a60c7ada82042b4a.png)
 
 `io.seata.rm.datasource.exec.BaseTransactionalExecutor#execute`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/608cb3e5179d49e2b889929473cef859.png)
+![在这里插入图片描述](images/02_SeataAT/608cb3e5179d49e2b889929473cef859.png)
 
 `io.seata.rm.datasource.exec.AbstractDMLBaseExecutor#doExecute`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/846de7683c8a41cb8e9edd5de049a964.png)
+![在这里插入图片描述](images/02_SeataAT/846de7683c8a41cb8e9edd5de049a964.png)
 
 这里获取到前后镜像，并执行了SQL语句。然后进行 Commit 操作。
 
 `io.seata.rm.datasource.ConnectionProxy#commit`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2a68d639831542b7857eb21a0c190462.png)
+![在这里插入图片描述](images/02_SeataAT/2a68d639831542b7857eb21a0c190462.png)
 
 直到方法 `io.seata.rm.datasource.ConnectionProxy#processGlobalTransactionCommit` 终于到了注册逻辑。
 
 `io.seata.rm.datasource.ConnectionProxy#register`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a8d89b572a634664b853811877744e44.png)
+![在这里插入图片描述](images/02_SeataAT/a8d89b572a634664b853811877744e44.png)
 
 `io.seata.rm.AbstractResourceManager#branchRegister`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/42181b7d12ae4a0e910db566434cd84f.png)
+![在这里插入图片描述](images/02_SeataAT/42181b7d12ae4a0e910db566434cd84f.png)
 
 这里还是通过 Netty 向 Server 端（TC）进行分支注册请求。来看下 Server 端的处理逻辑：
 
 `io.seata.core.rpc.processor.server.ServerOnRequestProcessor#handleRequestsByMergedWarpMessage`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/147e74b778ed455c93151d9fc55b5731.png)
+![在这里插入图片描述](images/02_SeataAT/147e74b778ed455c93151d9fc55b5731.png)
 
 控制台打印：
 
@@ -200,21 +200,21 @@ Server 端处理完毕后，回到 Client 端主方法，事务开启。
 
 `io.seata.server.coordinator.DefaultCoordinator#onRequest`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cd58391d27a841679cbc25d429818271.png)
+![在这里插入图片描述](images/02_SeataAT/cd58391d27a841679cbc25d429818271.png)
 
 `io.seata.server.AbstractTCInboundHandler#handle`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a80bc46aed5d4081bad48380b338fc4e.png)
+![在这里插入图片描述](images/02_SeataAT/a80bc46aed5d4081bad48380b338fc4e.png)
 
 `io.seata.server.coordinator.DefaultCoordinator#doBranchRegister`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/17f5ebb21cb3430fab57373e8ba74d19.png)
+![在这里插入图片描述](images/02_SeataAT/17f5ebb21cb3430fab57373e8ba74d19.png)
 
 Server 端分支注册方法：
 
 `io.seata.server.coordinator.AbstractCore#branchRegister`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b91b3d5b074842e4902d172711a8fabe.png)
+![在这里插入图片描述](images/02_SeataAT/b91b3d5b074842e4902d172711a8fabe.png)
 
 该方法的主要逻辑：
 
@@ -229,7 +229,7 @@ Server 端分支注册方法：
 
 `io.seata.server.session.SessionHelper#newBranchByGlobal`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/5b1ee66023504765ba786ad65671f888.png)
+![在这里插入图片描述](images/02_SeataAT/5b1ee66023504765ba786ad65671f888.png)
 
 控制台打印：
 
@@ -255,46 +255,46 @@ SQL 执行前后的数据，Seata 称之为前后镜像。
 
 `io.seata.rm.datasource.exec.AbstractDMLBaseExecutor#executeAutoCommitFalse`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/625e07124d374af6b999c98398c24c45.png)
+![在这里插入图片描述](images/02_SeataAT/625e07124d374af6b999c98398c24c45.png)
 
 `io.seata.rm.datasource.exec.BaseTransactionalExecutor#prepareUndoLog`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/8ac9fc7a7e4440989a5f4895b5bd2d87.png)
+![在这里插入图片描述](images/02_SeataAT/8ac9fc7a7e4440989a5f4895b5bd2d87.png)
 
 在上一步分支注册完成后，UndoLog 记录就会存入数据库中。
 
 `io.seata.rm.datasource.ConnectionProxy#processGlobalTransactionCommit`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/e954b41271f84323afa2848901a07ce1.png)
+![在这里插入图片描述](images/02_SeataAT/e954b41271f84323afa2848901a07ce1.png)
 
 `io.seata.rm.datasource.undo.AbstractUndoLogManager#flushUndoLogs`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2e77f2fdd36f441c80fadfce05ac002a.png)
+![在这里插入图片描述](images/02_SeataAT/2e77f2fdd36f441c80fadfce05ac002a.png)
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/886a5af3296f4f3f86e207560a561b71.png)
+![在这里插入图片描述](images/02_SeataAT/886a5af3296f4f3f86e207560a561b71.png)
 
 详细的信息都存在 rollback_info 字段中。三个事务分支的 undo_log 信息：
 
 Stock 库存：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7d8c903180064e17b60e5cd11ea41467.png)
+![在这里插入图片描述](images/02_SeataAT/7d8c903180064e17b60e5cd11ea41467.png)
 
 Order 订单：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9c809907fef7470394860ea49a2ca382.png)
+![在这里插入图片描述](images/02_SeataAT/9c809907fef7470394860ea49a2ca382.png)
 
 Account 账户：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/7406e7db4d244fe686f40817c1a92b98.png)
+![在这里插入图片描述](images/02_SeataAT/7406e7db4d244fe686f40817c1a92b98.png)
 
 ### 5、全局事务提交 Commit
 `io.seata.tm.api.DefaultGlobalTransaction#commit`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/0eff2c5a00964f4f9e71d13ab8c07712.png)
+![在这里插入图片描述](images/02_SeataAT/0eff2c5a00964f4f9e71d13ab8c07712.png)
 
 `io.seata.tm.DefaultTransactionManager#commit`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/f5626cff948747dc87908413c2e5b5a4.png)
+![在这里插入图片描述](images/02_SeataAT/f5626cff948747dc87908413c2e5b5a4.png)
 
 向 Server 端发起 Commit 请求。
 
@@ -317,21 +317,21 @@ Account 账户：
 ### 6、分支提交处理
 `io.seata.core.rpc.processor.client.RmBranchCommitProcessor#process`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/1bf29bfde5034001bf42dd139e922318.png)
+![在这里插入图片描述](images/02_SeataAT/1bf29bfde5034001bf42dd139e922318.png)
 
 `io.seata.rm.AbstractRMHandler#doBranchCommit`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/cc8e74600be041c085aa80c4c5bde784.png)
+![在这里插入图片描述](images/02_SeataAT/cc8e74600be041c085aa80c4c5bde784.png)
 
 因为一阶段 SQL 已经 Commit，因此二阶段分支提交主要是删除 UndoLog。
 
 `io.seata.rm.datasource.AsyncWorker#dealWithGroupedContexts`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/be2fbe6d7d1745af958dc871871ee8de.png)
+![在这里插入图片描述](images/02_SeataAT/be2fbe6d7d1745af958dc871871ee8de.png)
 
 `io.seata.server.coordinator.DefaultCore#doGlobalCommit`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/86108007719b445ba1353cdba0cb6757.png)
+![在这里插入图片描述](images/02_SeataAT/86108007719b445ba1353cdba0cb6757.png)
 
 Client 端控制台打印：
 
@@ -356,7 +356,7 @@ Server 端控制台打印：
 
 ## Seata AT 模式 Rollback 调用流程分析
 ### 1、调用流程图
-![在这里插入图片描述](https://img-blog.csdnimg.cn/88cc5f8baf484141bde61973c3c7cc6c.png)
+![在这里插入图片描述](images/02_SeataAT/88cc5f8baf484141bde61973c3c7cc6c.png)
 
 
 Rollback 业务流程中，在执行 Account 相关业务逻辑时抛出了运行时异常，然后各分支进行回滚操作。
@@ -364,11 +364,11 @@ Rollback 业务流程中，在执行 Account 相关业务逻辑时抛出了运�
 ### 2、全局事务回滚 Rollback
 `io.seata.tm.api.DefaultGlobalTransaction#rollback`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c2430f7696854d2a9285389a51fc51df.png)
+![在这里插入图片描述](images/02_SeataAT/c2430f7696854d2a9285389a51fc51df.png)
 
 `io.seata.tm.DefaultTransactionManager#rollback`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/82339cbfd4804d809dcb4e2da7323c2e.png)
+![在这里插入图片描述](images/02_SeataAT/82339cbfd4804d809dcb4e2da7323c2e.png)
 
 与 Commit 操作类似，向 Server 端发起请求。
 
@@ -381,15 +381,15 @@ Rollback 业务流程中，在执行 Account 相关业务逻辑时抛出了运�
 ### 3、分支回滚处理
 `io.seata.core.rpc.processor.client.RmBranchRollbackProcessor#process`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b7c8a27a6605478f831602a975170acc.png)
+![在这里插入图片描述](images/02_SeataAT/b7c8a27a6605478f831602a975170acc.png)
 
 `io.seata.rm.AbstractRMHandler#doBranchRollback`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/a45d5007801b4120a0bb959683d8980d.png)
+![在这里插入图片描述](images/02_SeataAT/a45d5007801b4120a0bb959683d8980d.png)
 
 `io.seata.rm.datasource.DataSourceManager#branchRollback`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/14c2f8075d66419b8cbcffbc070d3d94.png)
+![在这里插入图片描述](images/02_SeataAT/14c2f8075d66419b8cbcffbc070d3d94.png)
 
 在 `io.seata.rm.datasource.undo.AbstractUndoLogManager#undo` 这一步完成数据的回滚以及 undo_log 记录删除操作。
 
