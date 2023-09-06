@@ -20,3 +20,4 @@
   - [熔断降级知识整理](/ruoyi-cloud-plus/sentinel/04_Degrade&CircuitBreaker.md)
 - **Seata**
   - [Seata Server 部署（Windows、Docker 基于 Jpom）](/ruoyi-cloud-plus/seata/00_SeataServerDeploy.md)
+  - [Seata XA 模式 Demo 调用流程分析](/ruoyi-cloud-plus/seata/01_SeataXA.md)
