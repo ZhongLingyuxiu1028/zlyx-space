@@ -23,3 +23,4 @@
   - [Seata XA 模式 Demo 调用流程分析](/ruoyi-cloud-plus/seata/01_SeataXA.md)
   - [Seata AT 模式 Demo 调用流程分析](/ruoyi-cloud-plus/seata/02_SeataAT.md)
   - [Seata AT 模式全局锁相关知识简单整理](/ruoyi-cloud-plus/seata/03_SeataGlobalLock.md)
+  - [Seata TCC 模式 Demo 调用流程分析](/ruoyi-cloud-plus/seata/04_SeataTCC.md)
