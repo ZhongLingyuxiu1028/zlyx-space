@@ -24,3 +24,4 @@
   - [Seata AT 模式 Demo 调用流程分析](/ruoyi-cloud-plus/seata/02_SeataAT.md)
   - [Seata AT 模式全局锁相关知识简单整理](/ruoyi-cloud-plus/seata/03_SeataGlobalLock.md)
   - [Seata TCC 模式 Demo 调用流程分析](/ruoyi-cloud-plus/seata/04_SeataTCC.md)
+  - [Seata Saga 模式简单整理、Docker 部署 Nacos 单机（基于 Jpom）相关配置](/ruoyi-cloud-plus/seata/05_SeataSaga.md)
